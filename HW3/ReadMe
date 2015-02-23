@@ -1,0 +1,12 @@
+The source code is contained in hw3.c and hw3.h
+From the HW3 directory type 
+>>make clean
+>>make
+then to install type
+>>insmod hw3.ko hw3_nr_devs=6
+it creates a dev node entry for each device, eg, type
+>>ll /dev/mycdrv[0-9]
+Using the file objects requires root permissions, so sudo your test app
+>>sudo test_app
+To remove the module type
+>>rmmod hw3
